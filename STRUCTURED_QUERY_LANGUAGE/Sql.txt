@@ -1,0 +1,76 @@
+CREATE TABLE EmployeeTable(
+Empid int PRIMARY key,
+EmpName varchar(20) NOT NULL,
+EmpCode char(8) NOT NULL,
+status boolean default true,
+
+Department varchar(30) NOT NULL
+);
+
+Insert into EmployeeTable(Empid,EmpName,Empcode,Department) values(21,'utkarsh','21','CSE');
+Insert into EmployeeTable(Empid,EmpName,Empcode,Department) values(21,'utkarsh','2','CSE');
+Insert into EmployeeTable(Empid,EmpName,Empcode,Department) values(22,'utkarsh','3','CSE');
+Insert into EmployeeTable(Empid,EmpName,Empcode,Department) values(23,'utkarsh','4','CSE');
+Insert into EmployeeTable(Empid,EmpName,Empcode,Department) values(24,'utkarsh','5','CSE');
+Insert into EmployeeTable(Empid,EmpName,Empcode,Department) values(25,'utkarsh','6','CSE');
+Insert into EmployeeTable(Empid,EmpName,Empcode,Department) values(26,'utkarsh','7','CSE');
+Insert into EmployeeTable(Empid,EmpName,Empcode,Department) values(27,'utkarsh','8','CSE');
+
+
+UPDATE EmployeeTable 
+SET Empcode ='32'
+where Empid=27;
+
+UPDATE TABLE_NAME
+SET COLUMN_NAME='VALUE'
+WHERE ID='VALUE';
+
+select * from EmployeeTable;
+
+DELETE statement is used to delete the record from the TABLE
+DELETE FROM TABLE_NAME WHERE ID='VALUE';
+DELETE FROM EmployeeTable where empid='26';
+
+The ALTER statement is used to delete ,modify or add "columns" in the existing table
+
+
+ALTER TABLE-ADD COLUMN_NAME
+
+ALTER TABLE table_name  
+  ADD (column_1 column-definition,  
+       column_2 column-definition,  
+       ...  
+       column_n column_definition);  
+
+ALTER TABLE EmployeeTable
+Add (EmpAge varchar(20) ,
+    EmpVaccine varchar(2));
+
+
+ALTER TABLE  TABLE-DROP COLUMN
+ALTER TABLE table_name  
+  DROP COLUMN column_name;
+
+  ALTER TABLE EmployeeTable
+DROP COLUMN EmpVaccine;
+
+
+
+ALTER TABLE-ALTER/MODIFY COLUMN 
+ALTER TABLE table_name  
+  MODIFY column_name column_type;   
+
+  ALTER TABLE EmployeeTable
+MODIFY EmpVaccine char(4);
+
+
+DROP command deletes the table from the database
+ DROP TABLE TABLE_NAME
+
+ TRUNCATE command delete the data of the table all records but not table
+
+ TRUNCATR TABLE TABLE_NAME
+
+SELECT COLUMN_NAME FROM TABLE;
+SELECT * FROM TABLE;
+SELECT DISTINCT COLUMN_NAME FROM TABLE;
