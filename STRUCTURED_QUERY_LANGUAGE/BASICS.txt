@@ -1,0 +1,79 @@
+DDL DATA DEFINITION ->create,alter,drop
+Data manipulation language ->select,insert,update,delete
+Data control language-> Grant or Revoke
+
+DATABASE->TABLES->DATA->ROWS AND COLUMNS
+Datatype of a column defines what datatype a column can store
+String-> char,vachar
+numeric->int,float,bool
+datetime
+
+A primary key is a unique column we define to easily identify and acess data
+a primary key is unique and not null
+
+A foreign key is a column used to combine 2 or more tables.
+it can contain duplicate and NULL values.
+
+Constraints are used to specify rules for data in table.
+It ensures accuracy and reliability of the data in the table.
+Constraints are specified when the table is created during the CREATE command.
+After when the constraints is specified using CREATE command ,it can change by ALTER COMMAND.
+CREATE TABLE tablename(
+column1 datatype constraint
+)
+
+
+DROP TABLE tablename ; it is used to table,its structure and everything about table from database 
+
+Update query is used to update the columns in a targetted rows. DML
+Update tablename
+set column_name='value'
+where id=value ->specify row
+
+
+UPDATE mytable
+SET Name ='Ram Ji' ,Address='Ramji ki chowk' ,MobileNo='83838383'
+where ID=6;
+
+ALTER  COMMAND 2 USES
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+
+The ALTER TABLE statement is also used to add and drop various constraints on an existing table. DDL
+
+ALTER TABLE - ADD Column
+ALTER TABLE table_name
+ADD column_name datatype;
+
+
+ALTER TABLE - DROP COLUMN
+To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+ALTER TABLE - RENAME COLUMN
+To rename a column in a table, use the following syntax:
+
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
+ALTER TABLE - ALTER/MODIFY DATATYPE
+To change the data type of a column in a table, use the following syntax:
+
+SQL Server / MS Access:
+
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype;
+
+
+
+DROP table tablename DDL           TRUNCATE table tablename  DML
+delete everything about		delete the data(records) of the table 
+table from database
+
+
+
+select  distinct Email from mytable;
+count(*)->It gives the number of rows in the table.
+
+select ROUND(AVG(ID),2) as Average from mytable;

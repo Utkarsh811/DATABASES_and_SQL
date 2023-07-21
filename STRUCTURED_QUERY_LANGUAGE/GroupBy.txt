@@ -1,0 +1,20 @@
+Group by statement group rows that have same values into summary rows.
+It is often associated with aggregate functions(MAX(),AVG(),COUNT(),MAX(),MIN())
+
+select column_name1
+from table_name
+group by column_name1;
+
+**whatever column_name we are mentioning in select ,we should mention it in group by statement tooo.
+**where is used to give condition on columns on full table ,Having is used to give condition in grouped table.
+In keyword and =
+select * from emp where address ='Delhi';
+select * from emp where address in('delhi','meerut','gurugram');
+
+ -- select * from table1;
+ --  select * from table2;
+ select * from table1 t1 inner join table2 t2 on t1.id=t2.id;
+
+
+ Left Join-> Inner join+ fetch any additional records from left table which is not present in the right table.
+ Full Join-> Inner join + fetch any additional records from the left table which is not present in the right table + fetch any additional records from the right table which is not present in the left table
